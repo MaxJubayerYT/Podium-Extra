@@ -35,8 +35,9 @@ dependencies {
     mappings loom.officialMojangMappings()
     modImplementation "net.fabricmc:fabric-loader:${project.fabric_loader_version}"
 
-    // sosium
-    modImplementation "maven.modrinth:sodium:mc1.21.4-0.6.13-fabric"
+    // sodium is required at runtime, but compile-only here avoids remapping sodium's internal mixins during Podium builds
+    modCompileOnly "maven.modrinth:sodium:mc1.21.4-0.6.13-fabric"
+    modLocalRuntime "maven.modrinth:sodium:mc1.21.4-0.6.13-fabric"
 }
 
 processResources {

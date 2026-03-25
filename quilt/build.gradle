@@ -34,7 +34,8 @@ dependencies {
     mappings loom.officialMojangMappings()
     modImplementation "org.quiltmc:quilt-loader:${project.quilt_loader_version}"
 
-    modImplementation "maven.modrinth:sodium:mc1.21.4-0.6.13-fabric"
+    modCompileOnly "maven.modrinth:sodium:mc1.21.4-0.6.13-fabric"
+    modLocalRuntime "maven.modrinth:sodium:mc1.21.4-0.6.13-fabric"
 }
 
 processResources {
