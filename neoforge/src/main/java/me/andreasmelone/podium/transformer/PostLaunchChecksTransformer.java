@@ -16,26 +16,21 @@ public class PostLaunchChecksTransformer {
 
         ClassReader reader = new ClassReader(classfileBuffer);
         ClassWriter writer = new ClassWriter(reader, ClassWriter.COMPUTE_FRAMES | ClassWriter.COMPUTE_MAXS);
-        ReturnFalseInjector injector = new ReturnFalseInjector(writer, "isUsingPojavLauncher", "()Z");
+        MultiReturnFalseInjector injector = new MultiReturnFalseInjector(writer);
         reader.accept(injector, 0);
 
         return writer.toByteArray();
     }
 
-    public static class ReturnFalseInjector extends ClassVisitor {
-        private final String methodName;
-        private final String methodDesc;
-
-        public ReturnFalseInjector(ClassVisitor cv, String methodName, String methodDesc) {
+    public static class MultiReturnFalseInjector extends ClassVisitor {
+        public MultiReturnFalseInjector(ClassVisitor cv) {
             super(ASM9, cv);
-            this.methodName = methodName;
-            this.methodDesc = methodDesc;
         }
 
         @Override
         public MethodVisitor visitMethod(int access, String name, String desc, String signature, String[] exceptions) {
             MethodVisitor mv = super.visitMethod(access, name, desc, signature, exceptions);
-            if (name.equals(methodName) && desc.equals(methodDesc)) {
+            if (desc.equals("()Z") && isTarget(name)) {
                 return new MethodVisitor(ASM9, mv) {
                     @Override
                     public void visitCode() {
@@ -46,6 +41,14 @@ public class PostLaunchChecksTransformer {
                 };
             }
             return mv;
+        }
+
+        private static boolean isTarget(String name) {
+            return name.equals("isUsingPojavLauncher")
+                    || name.equals("isUsingAmethystLauncher")
+                    || name.equals("isUsingAndroidLauncher")
+                    || name.equals("isRunningOnAndroid")
+                    || name.equals("isMobile");
         }
     }
 }
