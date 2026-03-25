@@ -1,6 +1,6 @@
 ![icon](https://raw.githubusercontent.com/RaydanOMGr/Podium/refs/heads/master/fabric/src/main/resources/assets/podium/icon.png)
 
-# Podium Extras  
+# Podium Extra  
 > **Po**jav + So**dium** = **Podium**
 
 A tiny Mixin mod that disables [Sodium](https://modrinth.com/mod/sodium)'s [PojavLauncher](https://github.com/PojavLauncherTeam/PojavLauncher) (and [AAMC Amethyst](https://github.com/AngelAuraMC/Amethyst-Android)) check when a compatible mobile renderer is present. **Requires Sodium to run.**
