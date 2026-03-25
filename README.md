@@ -1,8 +1,10 @@
-![icon](https://raw.githubusercontent.com/MaxJubayerYT/Podium-Extra/refs/heads/codex/modify-podium-for-mobile-compatibility-3bqjcv/fabric/src/main/resources/assets/podium/icon.png)
+![icon](https://github.com/MaxJubayerYT/Podium-Extra/blob/master/fabric/src/main/resources/assets/podium/icon.png?raw=true)
 
-# Podium Extra  
+# Podium Extra 
 
  **Po**jav + So**dium** + **Extra**= **Podium-Extra**
+
+Podium Extra is a Fork of Podium
 
 A tiny Mixin mod that disables [Sodium](https://modrinth.com/mod/sodium)'s [PojavLauncher](https://github.com/PojavLauncherTeam/PojavLauncher) (and [AAMC Amethyst](https://github.com/AngelAuraMC/Amethyst-Android)) check when a compatible mobile renderer is present. **Requires Sodium to run.**
 ![if (isUsingPojavLauncher()) throw new RuntimeException("It appears that you are using PojavLauncher, which is not supported when " +                     "using Sodium. Please check your mods list.")](https://cdn.modrinth.com/data/fW8woQj4/images/cb8f648d44e0a2f57df66d3af61de2ea7d04f70e.png)
