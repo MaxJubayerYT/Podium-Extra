@@ -35,8 +35,7 @@ dependencies {
     mappings loom.officialMojangMappings()
     modImplementation "net.fabricmc:fabric-loader:${project.fabric_loader_version}"
 
-    // sodium is required at runtime, but compile-only here avoids remapping sodium's internal mixins during Podium builds
-    modCompileOnly "maven.modrinth:sodium:mc1.21.4-0.6.13-fabric"
+    // sodium is required at runtime; no compile-time dependency is needed because podium now patches by signature
     modLocalRuntime "maven.modrinth:sodium:mc1.21.4-0.6.13-fabric"
 }
 

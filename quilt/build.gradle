@@ -42,7 +42,7 @@ dependencies {
     compileOnly "net.fabricmc:sponge-mixin:0.15.4+mixin.0.8.7"
     compileOnly "org.ow2.asm:asm-tree:9.6"
 
-    modCompileOnly "maven.modrinth:sodium:mc1.21.4-0.6.13-fabric"
+    // sodium is required at runtime; compile classpath does not need sodium classes
     modLocalRuntime "maven.modrinth:sodium:mc1.21.4-0.6.13-fabric"
 }
 
