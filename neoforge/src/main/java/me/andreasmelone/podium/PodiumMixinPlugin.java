@@ -16,6 +16,7 @@ import java.util.Set;
 public class PodiumMixinPlugin implements IMixinConfigPlugin {
     @Override
     public void onLoad(String mixinPackage) {
+        PodiumSafety.emitRuntimeNotice();
         // nobody would ever want to mixin into this class, right?
         // well, not like they can do that anyway...
         ClassLoader loader = OsUtils.class.getClassLoader();

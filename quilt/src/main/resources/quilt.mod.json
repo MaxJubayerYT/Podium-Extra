@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "quilt_loader": {
+    "group": "${mod_group_id}",
+    "id": "${mod_id}",
+    "version": "${mod_version}",
+    "metadata": {
+      "name": "${mod_name}",
+      "description": "${mod_description}",
+      "contributors": {
+        "${mod_authors}": "Owner"
+      },
+      "contact": {
+        "sources": "https://github.com/RaydanOMGr/Podium"
+      },
+      "license": "${mod_license}"
+    },
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "depends": [
+      {
+        "id": "quilt_loader",
+        "versions": ">=${quilt_loader_version}"
+      },
+      {
+        "id": "minecraft",
+        "versions": "${minecraft_version_range}"
+      },
+      {
+        "id": "java",
+        "versions": ">=17"
+      },
+      {
+        "id": "sodium",
+        "versions": ">=0.5.13"
+      }
+    ]
+  },
+  "mixin": [
+    "podium.mixins.json"
+  ]
+}
