@@ -1,4 +1,4 @@
-![icon](https://raw.githubusercontent.com/MaxJubayerYT/Podium/refs/heads/master/fabric/src/main/resources/assets/podium/icon.png)
+![icon](https://raw.githubusercontent.com/MaxJubayerYT/Podium-Extra/refs/heads/codex/modify-podium-for-mobile-compatibility-3bqjcv/fabric/src/main/resources/assets/podium/icon.png)
 
 # Podium Extra  
 > **Po**jav + So**dium** = **Podium**
