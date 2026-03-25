@@ -1,4 +1,4 @@
-![icon](https://raw.githubusercontent.com/RaydanOMGr/Podium/refs/heads/master/fabric/src/main/resources/assets/podium/icon.png)
+![icon](https://raw.githubusercontent.com/MaxJubayerYT/Podium/refs/heads/master/fabric/src/main/resources/assets/podium/icon.png)
 
 # Podium Extra  
 > **Po**jav + So**dium** = **Podium**
@@ -18,16 +18,16 @@ This doesn’t magically make [Sodium](https://github.com/CaffeineMC/sodium-fabr
 
 ## Requirements
 - **Minecraft:** 1.20+
-- **Loader:** [Fabric](https://fabricmc.net/use/) 0.15 or newer or [NeoForge](https://neoforged.net/)
+- **Loader:** [Fabric](https://fabricmc.net/use/) 0.15 or newer or [NeoForge](https://neoforged.net/) or [Quilt](https://quiltmc.org/en/)
 - **Java:** 21 or newer
 - **[Sodium](https://github.com/CaffeineMC/sodium-fabric):** 0.5.13 or newer
 - **Launcher:** [PojavLauncher](https://github.com/PojavLauncherTeam/PojavLauncher) with MobileGlues or LTW
 
 
 ## Installation
-1. Download the latest release of **Podium** from [Modrinth](https://modrinth.com/mod/podium) or [Curseforge](https://curseforge.com/minecraft/mc-mods/podium-sodium).
+1. Download the latest release of **Podium** from [Modrinth](https://modrinth.com/mod/podium-extra)
 2. Make sure you have the [Fabric Loader](https://fabricmc.net/use/) installed on your [PojavLauncher](https://github.com/PojavLauncherTeam/PojavLauncher) instance.
-3. Put the `podium-1.1.0.jar` into your `mods` folder alongside [Sodium](https://github.com/CaffeineMC/sodium-fabric).
+3. Put the `podium-extra.jar` into your `mods` folder alongside [Sodium](https://github.com/CaffeineMC/sodium-fabric).
 4. Use a supported renderer like **LTW** or **MobileGlues**.
 5. Launch the game. If everything works, Sodium will no longer crash due to the Pojav check.
 
