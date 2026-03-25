@@ -51,12 +51,13 @@ processResources {
             mod_license             : mod_license,
             mod_version             : mod_version,
             mod_authors             : mod_authors,
-            mod_description         : mod_description
+            mod_description         : mod_description,
+            quilt_loader_version    : quilt_loader_version
     ]
 
     inputs.properties replaceProperties
 
-    filesMatching("fabric.mod.json") {
+    filesMatching(["fabric.mod.json", "quilt.mod.json"]) {
         expand replaceProperties
     }
 }
