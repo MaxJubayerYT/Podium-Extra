@@ -16,6 +16,12 @@ import java.util.Set;
 public class PodiumMixinPlugin implements IMixinConfigPlugin {
     @Override
     public void onLoad(String mixinPackage) {
+        if (!RendererGuard.shouldBypassMobileBlocks()) {
+            System.out.println("[Podium] Compatible mobile renderer not detected. Keeping default Sodium checks.");
+            return;
+        }
+
+        PodiumSafety.emitRuntimeNotice();
         // nobody would ever want to mixin into this class, right?
         // well, not like they can do that anyway...
         ClassLoader loader = OsUtils.class.getClassLoader();
