@@ -33,6 +33,8 @@ dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings loom.officialMojangMappings()
     modImplementation "org.quiltmc:quilt-loader:${project.quilt_loader_version}"
+    compileOnly "org.spongepowered:mixin:0.8.5"
+    compileOnly "org.ow2.asm:asm-tree:9.6"
 
     modCompileOnly "maven.modrinth:sodium:mc1.21.4-0.6.13-fabric"
     modLocalRuntime "maven.modrinth:sodium:mc1.21.4-0.6.13-fabric"
