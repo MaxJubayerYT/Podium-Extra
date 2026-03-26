@@ -28,11 +28,11 @@
       },
       {
         "id": "java",
-        "versions": ">=17"
+        "versions": ">=25"
       },
       {
         "id": "sodium",
-        "versions": ">=0.5.13"
+        "versions": "${sodium_version_range}"
       }
     ]
   },
