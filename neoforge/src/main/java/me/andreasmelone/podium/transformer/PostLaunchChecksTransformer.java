@@ -44,11 +44,7 @@ public class PostLaunchChecksTransformer {
         }
 
         private static boolean isTarget(String name) {
-            return name.equals("isUsingPojavLauncher")
-                    || name.equals("isUsingAmethystLauncher")
-                    || name.equals("isUsingAndroidLauncher")
-                    || name.equals("isRunningOnAndroid")
-                    || name.equals("isMobile");
+            return name.equals("isUsingPojavLauncher");
         }
     }
 }

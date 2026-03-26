@@ -24,19 +24,6 @@ public class PostLaunchChecksMixin {
         }
     }
 
-    @Inject(
-            at = @At("HEAD"),
-            method = "isUsingAmethystLauncher()Z",
-            cancellable = true,
-            remap = false,
-            require = 0
-    )
-    private static void isUsingAmethystMixin(CallbackInfoReturnable<Boolean> cir) {
-        if (RendererGuard.shouldBypassMobileBlocks()) {
-            cir.setReturnValue(false);
-        }
-    }
-
     @Redirect(
             method = "isUsingPojavLauncher()Z",
             at = @At(value = "INVOKE", target = "Ljava/lang/System;getProperty(Ljava/lang/String;)Ljava/lang/String;"),
