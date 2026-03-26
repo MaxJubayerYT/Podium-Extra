@@ -33,14 +33,23 @@ jobs:
       - name: build
         run: ./gradlew build
         
-      - name: capture fabric build artifacts
+      - name: capture podium-extra fabric jar
         uses: actions/upload-artifact@v4
         with:
-          name: Fabric-Artifacts
-          path: fabric/build/libs/
+          name: Podium-Extra-Fabric
+          path: fabric/build/libs/podium-extra-fabric-*.jar
+          if-no-files-found: error
 
-      - name: capture neoforge build artifacts
+      - name: capture podium-extra quilt metadata
         uses: actions/upload-artifact@v4
         with:
-          name: NeoForge-Artifacts
-          path: neoforge/build/libs/
+          name: Podium-Extra-Quilt
+          path: fabric/build/resources/main/quilt.mod.json
+          if-no-files-found: error
+
+      - name: capture podium-extra neoforge jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: Podium-Extra-NeoForge
+          path: neoforge/build/libs/podium-extra-neoforge-*.jar
+          if-no-files-found: error
