@@ -19,7 +19,7 @@ jobs:
       - name: setup jdk
         uses: actions/setup-java@v4
         with:
-          java-version: '21'
+          java-version: '25'
           distribution: 'microsoft'
 
       - name: setup gradle caching
@@ -31,7 +31,7 @@ jobs:
         run: chmod +x ./gradlew
         
       - name: build
-        run: ./gradlew build
+        run: ./gradlew :fabric:build
         
       - name: capture podium-extra fabric jar
         uses: actions/upload-artifact@v4
@@ -45,11 +45,4 @@ jobs:
         with:
           name: Podium-Extra-Quilt
           path: fabric/build/resources/main/quilt.mod.json
-          if-no-files-found: error
-
-      - name: capture podium-extra neoforge jar
-        uses: actions/upload-artifact@v4
-        with:
-          name: Podium-Extra-NeoForge
-          path: neoforge/build/libs/podium-extra-neoforge-*.jar
           if-no-files-found: error
